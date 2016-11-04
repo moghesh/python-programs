@@ -1,0 +1,80 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next= None
+class linklist:
+    def __init__(self):
+        self.head= None
+    def push(self,newdata):                 
+        newnode=Node(newdata)
+        newnode.next=self.head
+        self.head=newnode
+    def insertafter(self,previous,newdata):    
+        newnode=Node(newdata)
+        newnode.next=previous.next
+        previous.next=newnode
+
+    def atlast(self,newdata):   
+        newnode=Node(newdata)
+        if self.head is None:
+            self.head=newnode
+            return
+        last=self.head
+
+        while(last.next):
+            last=last.next
+            last=newnode.next
+            last.next=newnode
+
+    def deletenode(self,key):
+        temp=self.head
+        if(temp is not None):
+            if(temp.data==key):
+                self.head=temp.next
+                temp=None
+                return
+        while(temp is not None):
+            if(temp.data==key):
+                break
+            prev=self.head
+            temp=temp.next
+            prev.next=temp.next
+            temp=None
+
+    def delete(self,position):
+        temp=self.head
+        if position==0:
+            self.head=temp.next
+            temp=None
+            return
+        for i in range(position-1):
+            temp=temp.next
+            next=temp.next.next
+            temp.next=None
+            temp.next=next
+            
+            
+    def printList(self):
+        temp = self.head
+        while (temp):
+            print ("%d"%temp.data)
+            temp = temp.next
+
+        
+ 
+x=linklist()
+x.push(5)
+x.push(3)
+x.insertafter(x.head.next,10)
+x.push(2)
+x.printList()
+x.deletenode(2)
+x.printList()
+x.push(2)
+x.printList()
+x.delete(2)
+x.printList()
+
+
+
+

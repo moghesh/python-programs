@@ -1,0 +1,8 @@
+def add(a,b):
+    a=raw_input("enter value fo a")
+    b=raw_input("enter value for b")
+    c=a+b
+    return c 
+    
+d=add(2,3)
+print "addition of 2 no is :%s" %d

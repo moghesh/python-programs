@@ -1,0 +1,5 @@
+from collections import Counter
+coun=Counter()
+coun.update(['1','3','1','1','2','3','2'])
+coun.update(['1','1','3','2'])
+print coun

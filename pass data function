@@ -1,0 +1,7 @@
+def X(func):
+    func.data=3
+    return func
+def add(x,y):
+    return x+y
+print(add.data)
+print(add(2,3))

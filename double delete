@@ -1,0 +1,63 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        self.prev=None
+class doubly:
+    def __init__(self):
+        self.head=None
+    def push(self,newdata):
+        newnode=Node(newdata)
+        newnode.next=self.head
+        if self.head is not None:
+            self.head.prev=newnode
+        self.head=newnode
+    def delete(self,key):
+        if key==0:
+            print "enter a valid number to delete"
+        temp=self.head
+        if (temp is not None):
+            if (temp.data==key):
+                self.head=temp.next
+                temp.next.prev=None
+                temp=None
+                return
+        while (temp is not None):
+            if (temp.data==key):
+                break
+            prev=self.head
+            temp=temp.next
+            prev.next=temp.next
+    def deletemiddle(self,position):
+            temp=self.head
+            for i in range(position-1):
+                temp=temp.next
+                next=temp.next.next
+                temp.next=None
+                temp.next=next
+                
+                
+
+    def printll(self):
+         print "\nTraversal in forward direction"
+         node=self.head
+         while(node):
+            print " %d" %(node.data),
+            
+            node = node.next
+             
+   
+x=doubly()
+x.push(10)
+x.push(3)
+x.push(1)
+x.printll()
+x.delete(1)
+x.printll()
+x.push(1)
+x.push(6)
+x.printll()
+
+x.deletemiddle(3)
+x.printll()
+x.push(1)

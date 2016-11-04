@@ -1,0 +1,5 @@
+import math
+def func(x):
+    print math.factorial(x)
+a=func(4)
+print a

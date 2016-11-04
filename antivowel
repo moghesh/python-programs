@@ -1,0 +1,13 @@
+def antivowel(x):
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    
+    for i in x:
+        x=list(int(x))
+        if x[i]==vowels[i]:
+            del(x[i])
+            print x
+        else:
+            print x
+            
+print antivowel("Hello")
+        

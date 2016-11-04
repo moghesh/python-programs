@@ -1,0 +1,7 @@
+def X(str): 
+    def Y():
+        return "welcome to "
+    return  Y() + str
+
+print X("corvallis")
+
