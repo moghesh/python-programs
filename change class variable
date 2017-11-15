@@ -1,0 +1,12 @@
+class CSStudent:
+    stream='cse'
+    def __init__(self,name,roll):
+        self.name=name
+        self.roll=roll
+
+a=CSStudent("shashank",4)
+print "a.stream=",a.stream
+
+CSStudent.stream='mech'
+b=CSStudent("shank",1)
+print "b.stream=",b.stream

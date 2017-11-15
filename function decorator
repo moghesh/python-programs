@@ -1,0 +1,9 @@
+def X(fun):
+    def Y(site_name):
+        return "Welcome to" + fun(site_name)
+    return Y
+def site(site_name):
+    return site_name
+
+print site("corvalliss")
+    

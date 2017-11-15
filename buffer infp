@@ -1,0 +1,10 @@
+class Print:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def __repr__(self):
+        return "a=%s b=%s" % (self.a,self.b)
+
+p=Print(123,234)
+print(p)
+

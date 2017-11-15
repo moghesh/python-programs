@@ -1,0 +1,33 @@
+class Car(object):
+    condition="new"
+    def __init__(self,model,colour,mpg):
+        self.model=model
+        self.colour=colour
+        self.mpg=mpg
+
+class electricCar(Car):
+    def __init__(self,model,colour,mpg,batterytype):
+        self.model=model
+        self.colour=colour
+        self.mpg=mpg
+        self.batterytype=batterytype
+    def drivecar(self):
+        self.condition="like new"
+        
+model=raw_input("enter your car model")
+colour=raw_input("enter your car colour")
+mpg=raw_input("enter your car mpg")
+batterytype=raw_input("enter your batterytype")
+
+mycar=electricCar(model,colour,mpg,batterytype)
+print mycar.condition
+print mycar.model
+print mycar.colour
+print mycar.mpg
+print mycar.batterytype
+
+print mycar.condition
+
+mycar.drivecar()
+print mycar.condition
+

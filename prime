@@ -1,0 +1,6 @@
+def is_prime(x):
+    if x%2==0:
+        print "number is not prime"
+    else:
+        print "number is prime"
+is_prime(6)

@@ -1,0 +1,24 @@
+class queue:
+    def __init__(self):
+        self.item=[]
+    def isEmpty(self):
+        return self.item
+    def enqueue(self,item):
+        self.item.insert(0,item)
+       
+    def dequeue(self,item):
+        return self.item.pop(item)
+
+    def size(self):
+        return len(self.item)
+    def y(self):
+        print (self.item)
+x=queue()
+x.enqueue("shashank")
+x.enqueue(10)
+x.enqueue(100)
+print (x.size())
+print (x.y())
+x.dequeue(10)
+print x.y()
+    

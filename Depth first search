@@ -1,0 +1,19 @@
+def main():
+    matrix=[ [1,1,1,1]
+    v=[1,1]
+    stack=[1]
+    v[1]=1
+    node=stack.pop(len(stack)-1)
+    print (node)
+    while True:
+        for x in range(0,len(v)):
+             if matrix[node][x]==1 and visited==0:
+                 visited[x]=1
+                 stack.append(x)
+        if len(stack)==0:
+             break
+        else:
+             node=node=stack.pop(len(stack)-1)
+             print (node)
+
+    

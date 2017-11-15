@@ -1,0 +1,14 @@
+class iterators(object):
+    def __init__(self,limit):
+        self.limit=limit
+    def __iter__(self):
+        self.x=10
+        return self
+    def next(self):
+        x=self.x
+        if x>self.limit:
+            raise StopIteration
+        else:
+            self.x=x+1
+            return x
+

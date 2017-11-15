@@ -1,0 +1,27 @@
+def makestack():
+    stack=[]
+    return stack
+def isempty(stack):
+    return len(stack)==0
+def push(stack,item):
+    stack.append(item)
+def pop(stack,item):
+    if isempty(stack):
+        print "Empty stack"
+    
+    print stack.pop()
+def peek(stack):
+    if (isempty(stack)):
+        print "empty"
+    
+    print stack[len(stack)-1]
+stack = makestack()
+push(stack,10)
+push(stack,20)
+push(stack,30)
+print stack
+pop(stack,30)
+print stack
+peek(stack)
+print stack
+

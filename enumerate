@@ -1,0 +1,3 @@
+cars=["x","y","z"]
+for x enumerate(cars):
+    print x

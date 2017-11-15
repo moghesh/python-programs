@@ -1,0 +1,7 @@
+cars = ["Aston", "Audi", "McLaren"]
+accessories = ["GPS kit", "Car repair-tool kit"]
+for c,a in zip(cars,accessories):
+    print "car: %s accessories required: %s" %(c,a)
+
+
+                    

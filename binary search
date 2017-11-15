@@ -1,0 +1,14 @@
+def Binaryseach(arr,l,r,x):
+    if r>=l:
+        mid=l+(l-r)/2
+        if arr[mid]==x:
+            return arr[mid]
+        elif r>arr[mid]:
+            return Binarysearch(arr,l,mid-1,x)
+        else:
+            return Binarysearch(arr,mid+1,r,x)
+    else:
+        return -1
+
+    
+        
